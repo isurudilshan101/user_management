@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Log In - User Management System</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 
@@ -11,6 +12,10 @@
 		<form action="index.php" method="post"></form>
 		<fieldset>
 			<legend><h1>Log In</h1></legend>
+
+			<!-- <p class="error">Invalid Username / Password</p> -->
+
+
 			<p>
 				<label for="">Username:</label>
 				<input type="text" name="email" id="" placeholder="Email Address">
@@ -21,6 +26,8 @@
 				<label for="">Password</label>
 				<input type="Password" name="" id="" placeholder="Password">
 			</p>
+
+			<button type="submit" name="submit">Log In</button>
 		</fieldset>
 
 	</div> <!--login-->
