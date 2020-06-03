@@ -64,14 +64,17 @@ if(empty($errors)){
 
 	<div class="login">
 		
-		<form action="index.php" method="post"></form>
+		<form action="index.php" method="POST"></form>
 		<fieldset>
 			<legend><h1>Log In</h1></legend>
 
-			<?php>
+			<?php
+
 				if(isset($errors) && !empty($errors)){
 					echo '<p class="error">Invalid Username / Password</p>';
-				}
+				
+
+			}
 
 			?>
 			
