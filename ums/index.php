@@ -23,10 +23,28 @@ if(empty($errors)){
 
 
 //prepare database query
+	$query="SELECT * FROM user WHERE email='{$email}' AND password='{$hashed_password}' LIMIT 1";
+
+	$result_set=mysqli_query($connection,$query);
+
+	if($result_set){
+		//query succesful
+		if(mysqli_num_rows($result_set)==1){
+			//valid user found
+			//redirect to users.php
+			header('Location:users.php');
+
+		}else{
+			$errors[]='Invalid Username / Password';
+		}
+
+	}else{
+		$errors[]='database query failed';
+	}
 
 //check if the user is valid
 
-//redirect to users.php
+
 
 //if not, display the error 
 }	
@@ -50,7 +68,13 @@ if(empty($errors)){
 		<fieldset>
 			<legend><h1>Log In</h1></legend>
 
-			<!-- <p class="error">Invalid Username / Password</p> -->
+			<?php>
+				if(isset($errors) && !empty($errors)){
+					echo '<p class="error">Invalid Username / Password</p>';
+				}
+
+			?>
+			
 
 
 			<p>
