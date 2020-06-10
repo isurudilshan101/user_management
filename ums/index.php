@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require_once('inc/connection.php'); ?>
 <?php 
 
@@ -7,7 +8,7 @@ if(isset($_POST['submit'])){
 $errors=array();
 // check if the username and password has been entered
 	if(!isset($_POST['email']) || strlen(trim($_POST['email']))<1){
-		$errors[]="User name is missing/Invalid;";
+		$errors[]='User name is missing/Invalid';
 	}
 
 	if(!isset($_POST['password']) || strlen(trim($_POST['password']))<1){

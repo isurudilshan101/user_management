@@ -5,7 +5,7 @@
 	$dbpass = '';
 	$dbname = 'userdb1'; 
 
-	$connection = mysqli_connect('localhost', 'root', '', 'userdb');
+	$connection = mysqli_connect('localhost', 'root', '', 'userdb1');
 
 	// Checking the connection
 	if (mysqli_connect_errno()) {
