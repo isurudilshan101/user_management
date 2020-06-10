@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php require_once('inc/connection.php'); ?>
 <?php 
 
@@ -65,7 +64,7 @@ if(empty($errors)){
 
 	<div class="login">
 		
-		<form action="index.php" method="POST"></form>
+		<form action="index.php" method="POST">
 		<fieldset>
 			<legend><h1>Log In</h1></legend>
 
@@ -94,6 +93,7 @@ if(empty($errors)){
 
 			<button type="submit" name="submit">Log In</button>
 		</fieldset>
+		</form>
 
 	</div> <!--login-->
 
