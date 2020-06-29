@@ -5,6 +5,9 @@
 	<title>Users</title>
 </head>
 <body>
-	<h1>Users</h1>
+	<header>
+		<div class="appname">User management System</div>
+		<div class="loggedin">Welcome Username! <a href="logout.php">Log Out</a></div>
+	</header>
 </body>
 </html>
