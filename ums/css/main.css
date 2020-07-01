@@ -1,3 +1,6 @@
+*{
+	margin: 0;
+}
 body{
 	font-family: Arial, "Helvetica Neue", Helvetica,sans-serif;
 	font-size: 14px;	
@@ -29,7 +32,12 @@ button{
 	box-sizing: border-box;
 }
 
-header .appname{
+header {
+	background: #eee;
+	overflow: auto;
+}
+
+header.appname{
 	float: left;
 }
 
