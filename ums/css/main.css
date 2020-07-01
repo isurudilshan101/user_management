@@ -28,3 +28,11 @@ button{
 	padding: 5px;
 	box-sizing: border-box;
 }
+
+header .appname{
+	float: left;
+}
+
+header .loggedin{
+	float: right;
+}

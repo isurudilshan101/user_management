@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Users</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<header>
