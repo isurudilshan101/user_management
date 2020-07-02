@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php require_once('inc/connection.php'); ?>
 <?php 
 
@@ -30,7 +31,10 @@ if(empty($errors)){
 	if($result_set){
 		//query succesful
 		if(mysqli_num_rows($result_set)==1){
-			//valid user found
+			//valid user found  
+			$user=mysqli_fetch_assoc($result_set);
+			$_SESSION['user_id']=$user['id'];
+			$_SESSION['first_name']=$user['first_name'];
 			//redirect to users.php
 			header('Location:users.php');
 

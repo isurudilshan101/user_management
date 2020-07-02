@@ -35,6 +35,7 @@ button{
 header {
 	background: #eee;
 	overflow: auto;
+	padding: 10px;
 }
 
 header.appname{
