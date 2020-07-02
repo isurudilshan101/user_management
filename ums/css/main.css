@@ -11,6 +11,10 @@ body{
 	margin:100px auto;
 }
 
+p{
+	margin-bottom: 15px;
+}
+
 p.error{
 	 background:red;
 	 color: white;
