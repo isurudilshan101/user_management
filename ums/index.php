@@ -81,6 +81,13 @@ if(empty($errors)){
 			}
 
 			?>
+
+			<?php 
+				if(isset($_GET['logout'])){
+					echo '<p class="info">You have succesfully logged out from the system</p>';
+				}
+
+			 ?>
 			
 
 
