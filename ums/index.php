@@ -21,7 +21,7 @@ if(empty($errors)){
 
 	$password=mysqli_real_escape_string($connection,$_POST['password']);
 	$hashed_password=sha1($password);
-
+ 
 
 //prepare database query
 	$query="SELECT * FROM user WHERE email='{$email}' AND password='{$password}' LIMIT 1";
