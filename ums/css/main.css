@@ -55,3 +55,29 @@ header.appname{
 header .loggedin{
 	float: right;
 }
+
+main{
+	width: 1000px;
+	margin:30px auto;
+}
+
+main h1{
+	margin-bottom: 20px;
+	font-size: 50px;
+}
+
+main h1 span{
+	font-size: 20px;
+}
+
+table.masterlist{
+	width: 100w;
+}
+
+table.materlist th{
+	background:#aaa;
+}
+
+table.masterlist th, table.masterlist td{
+	padding: 10px;
+}

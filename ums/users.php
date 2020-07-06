@@ -46,7 +46,7 @@
 
 	<main>
 		<h1>Users <span><a href="add-user.php">+Add New</a></span>	</h1>	
-		<table class="masterlist"></table>
+		<table class="masterlist">
 		<tr>
 			<th>First Name</th>
 			<th>Last Name</th>
