@@ -72,12 +72,16 @@ main h1 span{
 
 table.masterlist{
 	width: 100w;
+	border-collapse: collapse;
 }
 
-table.materlist th{
+table.masterlist th{
 	background:#aaa;
-}
+	text-align: left;
+
+}	
 
 table.masterlist th, table.masterlist td{
-	padding: 10px;
+	padding: 10px 60px 10px 10px;
+	border-bottom: 1px solid #aaa;
 }
