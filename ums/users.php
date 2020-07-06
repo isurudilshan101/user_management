@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require_once('inc/connection.php'); ?>
+<?php require_once('inc/functions.php'); ?>
 
 <?php
 	//cheking if a user is logged in
@@ -13,7 +14,7 @@
 	$query="SELECT * FROM user WHERE is_deleted=0 ORDER BY first_name";
 	$users=mysqli_query($connection,$query);
 
-	if($users){
+	verify_query($users);
 		while($user=mysqli_fetch_assoc($users)){
 			$user_list .="<tr>";
 			$user_list .="<td>{$user['first_name']}</td>";
@@ -25,9 +26,7 @@
 
 
 			$user_list .="</tr>";
-		}
-	}else{
-		echo "Database query failed";
+		
 	}
 
 ?>
