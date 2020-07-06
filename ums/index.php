@@ -35,6 +35,16 @@ if(empty($errors)){
 			$user=mysqli_fetch_assoc($result_set);
 			$_SESSION['user_id']=$user['id'];
 			$_SESSION['first_name']=$user['first_name'];
+
+			//Updating last login
+			$query="UPDATE user SET last_login=NOW()";
+			$query .="WHERE id={$_SESSION['user_id']} LIMIT 1";
+			$result_set=mysqli_query($connection,$query);
+
+			if(!$result_set){
+				die("database query failed");
+			}
+
 			//redirect to users.php
 			header('Location:users.php');
 
