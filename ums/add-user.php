@@ -17,19 +17,8 @@
 	</header>
 
 	<main>
-		<h1>Users <span><a href="add-user.php">+Add New</a></span>	</h1>	
-		<table class="masterlist">
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Last Login</th>
-			<th>Edit</th>
-			<th>Delete</th>
-
-			<?php echo $user_list; ?>
-
-		</tr>
-		</table>
+		<h1>Add New User<span><a href="add-user.php">+Add New</a></span>	</h1>	
+		
 
 	</main>
 </body>
