@@ -22,26 +22,27 @@
 		<form action="add-user.php" method="post" class="userform">
 			<p>
 				<label for="">Fiest Name:</label>
-				<input type="text" name="first_name">
+				<input type="text" name="first_name" required>
 			</p>
 
 			<p>
 				<label for="">Last Name:</label>
-				<input type="text" name="last_name">
+				<input type="text" name="last_name" required>
 			</p>
 
 			<p>
 				<label for="">Email Address:</label>
-				<input type="Email" name="email">
+				<input type="Email" name="email" required>
 			</p>
 
 			<p>
-				<label for="">New Password</label>
-				<input type="password" name="password">
+				<label for="">New Password:</label>
+				<input type="password" name="password" required>
 			</p>
 
 			<p>
 				<label for="">&nbsp;</label>
+				<button type="submit" name="submit">Save</button>
 			</p>
 			
 		</form>

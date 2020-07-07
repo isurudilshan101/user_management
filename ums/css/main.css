@@ -85,3 +85,15 @@ table.masterlist th, table.masterlist td{
 	padding: 10px 65px 10px 10px;
 	border-bottom: 1px solid #aaa;
 }
+
+form.userform label{
+	width:30%;
+	float:left;
+}
+
+form.userform input{
+	width: 60%;
+}
+form.userform button{
+	width: 200px;
+}
