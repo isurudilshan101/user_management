@@ -12,8 +12,8 @@
 			$max_len_fields=array('first_name' =>50,'last_name' =>100,'email' =>100,'password' =>40);
 
 			foreach ($max_len_fields as $field =>$max_len) {
-				if(strlen(trim($_POST[$field]))){
-			$errors[]= $field . ' is required';
+				if(strlen(trim($_POST[$field]))<$max_len){
+			$errors[]= $field . ' must be less than ' . $max_len . 'characters';
 		}
 
 	}
