@@ -17,7 +17,7 @@
 	</header>
 
 	<main>
-		<h1>Add New User<span><a href="add-user.php">+Add New</a></span>	</h1>	
+		<h1>Add New User<span><a href="users.php"> < Back to User List</a></span>	</h1>	
 		
 
 	</main>
