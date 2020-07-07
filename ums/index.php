@@ -30,8 +30,10 @@ if(empty($errors)){
 
 	$result_set=mysqli_query($connection,$query);
 
-	if($result_set){
+	// if($result_set){
 		//query succesful
+	verify_query($result_set);
+
 		if(mysqli_num_rows($result_set)==1){
 			//valid user found  
 			$user=mysqli_fetch_assoc($result_set);
@@ -43,9 +45,10 @@ if(empty($errors)){
 			$query .="WHERE id={$_SESSION['user_id']} LIMIT 1";
 			$result_set=mysqli_query($connection,$query);
 
-			if(!$result_set){
-				die("database query failed");
-			}
+			// if(!$result_set){
+			// 	die("database query failed");
+			// }
+			verify_query($result_set);
 
 			//redirect to users.php
 			header('Location:users.php');
@@ -54,9 +57,9 @@ if(empty($errors)){
 			$errors[]='Invalid Username / Password';
 		}
 
-	}else{
-		$errors[]='database query failed';
-	}
+	// }else{
+	// 	$errors[]='database query failed';
+	// }
 
 //check if the user is valid
 
