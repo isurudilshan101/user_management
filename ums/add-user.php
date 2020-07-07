@@ -7,8 +7,21 @@
 
 	if(isset($_POST['submit'])){
 		//checking required fields
-		if(empty($_POST['first_name'])){
-			$errors[]='First Nae is required';
+
+		if(empty(trim($_POST['first_name']))){
+			$errors[]='First Name is required';
+		}
+
+		if(empty(trim($_POST['last_name']))){
+			$errors[]='Last Name is required';
+		}
+
+		if(empty(trim($_POST['email']))){
+			$errors[]='Email is required';
+		}
+
+		if(empty(trim($_POST['password']))){
+			$errors[]='password is required';
 		}
 	}
 
