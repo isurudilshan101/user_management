@@ -21,7 +21,7 @@
 		}
 
 		if(empty(trim($_POST['password']))){
-			$errors[]='password is required';
+			$errors[]='Password is required';
 		}
 	}
 
@@ -47,7 +47,12 @@
 		<?php 
 
 		if(!empty($errors)){
-			echo 'There ware errors on your form.';
+			echo '<div class="errmsg">';
+			echo '<b>There ware errors on your form.</b>';
+			foreach ($errors as $error) {
+				echo $error;
+			}
+			echo '</div>';
 		}
 
 
