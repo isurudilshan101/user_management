@@ -6,24 +6,20 @@
 	$errors=array();
 
 	if(isset($_POST['submit'])){
-		//checking required fields
 
-		if(empty(trim($_POST['first_name']))){
-			$errors[]='First Name is required';
+			//checking required fields
+
+			$req_fields=array('first_name','last_name','email','password');
+
+			foreach ($req_fields as $field) {
+				if(empty(trim($_POST[$field]))){
+			$errors[]= $field . ' is required';
 		}
 
-		if(empty(trim($_POST['last_name']))){
-			$errors[]='Last Name is required';
-		}
-
-		if(empty(trim($_POST['email']))){
-			$errors[]='Email is required';
-		}
-
-		if(empty(trim($_POST['password']))){
-			$errors[]='Password is required';
-		}
 	}
+}
+
+	
 
  ?>
 
@@ -48,9 +44,9 @@
 
 		if(!empty($errors)){
 			echo '<div class="errmsg">';
-			echo '<b>There ware errors on your form.</b>';
+			echo '<b>There ware errors on your form.</b><br>';
 			foreach ($errors as $error) {
-				echo $error;
+				echo $error . '<br>';
 			}
 			echo '</div>';
 		}
