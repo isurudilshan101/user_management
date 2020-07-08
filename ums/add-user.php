@@ -45,7 +45,7 @@
 
 			//checking if email addressmalready exist
 
-			$email=mysqli_real_string($connection, $_POST['email']);
+			$email=mysqli_real_scape_string($connection, $_POST['email']);
 			$query="SELECT * FROM user WHERE email='{$email}' LIMIT 1";
 
 			$result_set=mysqli_query($connection,$query);
