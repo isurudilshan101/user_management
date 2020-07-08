@@ -70,7 +70,7 @@
 				$query="INSERT INTO user ( ";
 				$query .="first_name,last_name,email,password,is_deleted";
 				$query .=") VALUES (";
-				$query .="'{$first_name}','{$last_name}','{email}','{$hashed_password}',0";
+				$query .="'{$first_name}','{$last_name}','{$email}','{$hashed_password}',0";
 				$query .= ")";
 
 				$result=mysqli_query($connection,$query); 
@@ -79,6 +79,9 @@
 					//query successful and redirecting to users page
 
 					header('Location:users.php?user_added=true');
+				}
+				else{
+					$errors[]='failed to add the new record';
 				}
 
 
