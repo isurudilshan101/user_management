@@ -73,7 +73,13 @@
 				$query .="'{$first_name}','{$last_name}','{email}','{$hashed_password}',0";
 				$query .= ")";
 
-				$result=mysqli_query($connection,$query);
+				$result=mysqli_query($connection,$query); 
+
+				if($result){
+					//query successful and redirecting to users page
+
+					header('Location:users.php?user_added=true');
+				}
 
 
 
