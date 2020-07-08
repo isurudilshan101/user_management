@@ -5,7 +5,17 @@
 
 	$errors=array();
 
+	$first_name='';
+	$last_name='';
+	$email='';
+	$password='';
+
 	if(isset($_POST['submit'])){
+
+			$first_name=$_POST['first_name'];
+			$last_name=$_POST['last_name'];
+			$email=$_POST['email'];
+			$password=$_POST['password'];
 
 			//checking required fields
 
@@ -26,10 +36,12 @@
 
 			foreach ($max_len_fields as $field =>$max_len) {
 				if(strlen(trim($_POST[$field]))>$max_len){
-			$errors[]= $field . ' must be less than ' . $max_len . 'characters';
+			$errors[]= $field . ' must be less than ' . $max_len . ' characters';
 		}
 
 	}
+
+
 
 }
 
@@ -71,22 +83,22 @@
 		<form action="add-user.php" method="post" class="userform">
 			<p>
 				<label for="">First Name:</label>
-				<input type="text" name="first_name" >
+				<input type="text" name="first_name" <?php echo 'value="' . $first_name . '"' ?>>
 			</p>
 
 			<p>
 				<label for="">Last Name:</label>
-				<input type="text" name="last_name" >
+				<input type="text" name="last_name" <?php echo 'value="' . $last_name . '"' ?>>
 			</p>
 
 			<p>
 				<label for="">Email Address:</label>
-				<input type="Email" name="email" >
+				<input type="Email" name="email" <?php echo 'value="' . $email . '"' ?>>
 			</p>
 
 			<p>
 				<label for="">New Password:</label>
-				<input type="password" name="password" >
+				<input type="password" name="password">
 			</p>
 
 			<p>
