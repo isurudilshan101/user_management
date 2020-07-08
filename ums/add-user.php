@@ -30,7 +30,7 @@
 
 	
 
-	//checking max length
+			//checking max length
 
 			$max_len_fields=array('first_name' =>50,'last_name' =>100,'email' =>100,'password' =>40);
 
@@ -41,6 +41,21 @@
 
 	}
 
+
+
+			//checking if email addressmalready exist
+
+			$email=mysqli_real_string($connection, $_POST['email']);
+			$query="SELECT * FROM user WHERE email='{$email}' LIMIT 1";
+
+			$result_set=mysqli_query($connection,$query);
+
+			if($result_set){
+
+				if(mysqli_num_rows($result_set)==1){
+					$errors[]= 'Email address already exists';
+				}
+			}
 
 
 }
