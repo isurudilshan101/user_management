@@ -65,6 +65,19 @@
 				$last_name=mysqli_real_escape_string($connection, $_POST['last_name']);
 				$password=mysqli_real_escape_string($connection, $_POST['password']);
 
+				$hashed_password=sha1($password);
+
+				$query="INSERT INTO user ( ";
+				$query .="first_name,last_name,email,password,is_deleted";
+				$query .=") VALUES (";
+				$query .="'{$first_name}','{$last_name}','{email}','{$hashed_password}',0";
+				$query .= ")";
+
+				$result=mysqli_query($connection,$query);
+
+
+
+
 
 			}
 
