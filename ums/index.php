@@ -26,7 +26,7 @@ if(empty($errors)){
  
 
 //prepare database query
-	$query="SELECT * FROM user WHERE email='{$email}' AND password='{$password}' LIMIT 1";
+	$query="SELECT * FROM user WHERE email='{$email}' AND password='{$hashed_password}' LIMIT 1";
 
 	$result_set=mysqli_query($connection,$query);
 
