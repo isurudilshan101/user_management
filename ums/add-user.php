@@ -58,6 +58,16 @@
 			}
 
 
+			if(empty($errors)){
+				//no errors found. Adding new record
+
+				$first_name=mysqli_real_escape_string($connection, $_POST['first_name']);
+				$last_name=mysqli_real_escape_string($connection, $_POST['last_name']);
+				$password=mysqli_real_escape_string($connection, $_POST['password']);
+
+
+			}
+
 }
 
 	
